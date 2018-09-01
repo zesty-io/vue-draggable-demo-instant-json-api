@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Jack in the Box Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/material/vue-material.css">
+</head>
+
+<body>
+	<style>
+	.md-list {
+  width: 100%;
+}
+.md-list .md-list-item{
+	margin: 5px 10px;
+	border-radius: 5px;
+}
+.menu-dropper{
+	border-radius: 4px;
+	background: #e2e2e2;
+}
+
+.md-theme-default.md-list{
+	background: transparent;
+}
+.md-theme-default.md-toolbar{
+	background: #DF1D3C;
+}
+
+
+</style>
+
+    <div id="main">
+        <div id="app">
+            <md-toolbar>
+                <h1 class="md-title">Jack in the Box Configurable Menu</h1>
+            </md-toolbar>
+
+            <md-layout :md-gutter="32">
+                <md-layout-item class="md-size-33">
+                    <draggable v-model="listA" element="md-list" :options="sortOptions">
+                        <md-list-item v-for="item in listA" :key="item.meta.zuid">
+														<img :src="item.content.image.data[0].url" width="120" />
+														<span>{{ item.content.item_name }}</span>
+                        </md-list-item>
+                    </draggable>
+                </md-layout-item>
+
+                <md-layout-item class="md-size-33 menu-dropper">
+										<h2 class="center">Burgers Menu</h2>
+                    <draggable v-model="listb" element="md-list" :options="sortOptions">
+											<md-list-item v-for="item in listB" :key="item.meta.zuid">
+												<img :src="item.content.image.data[0].url" width="120" />
+													<span>{{ item.content.item_name }}</span>
+											</md-list-item>
+                    </draggable>
+                </md-layout-item>
+								<md-layout-item class="md-size-33">
+										<h2 class="center">Chicken</h2>
+										<draggable  v-model="listC" element="md-list" :options="sortOptions">
+											<md-list-item v-for="item in listC" :key="item.meta.zuid">
+												<img :src="item.content.image.data[0].url" width="120" />
+													<span>{{ item.content.item_name }}</span>
+											</md-list-item>
+										</draggable>
+								</md-layout-item>
+            </md-layout>
+        </div>
+
+    </div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<!-- CDNJS :: Sortable (https://cdnjs.com/) -->
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
+		<!-- CDNJS :: Vue.Draggable (https://cdnjs.com/) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
+    <script type="text/javascript" src="./assets/material/vue-material.js"></script>
+    <script type="text/javascript" src="./component.js"></script>
+</body>
+
+</html>
