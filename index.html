@@ -52,7 +52,7 @@
 
                 <md-layout-item class="md-size-33 menu-dropper">
 										<h2 class="center">Burgers Menu</h2>
-                    <draggable v-model="listb" element="md-list" :options="sortOptions">
+                    <draggable v-model="listB" element="md-list" :options="sortOptions">
 											<md-list-item v-for="item in listB" :key="item.meta.zuid">
 												<img :src="item.content.image.data[0].url" width="120" />
 													<span>{{ item.content.item_name }}</span>

@@ -13,7 +13,16 @@ var App = new Vue({
         { meta: {zuid: 3}, content: { item_name: 'Double Jack', image: {data: [{url: "https://q4kk5z5z.media.zestyio.com/03-double-jack.png", zuid: "3-6cdbe79-5o6nu"}] } } }
       ],
 			listC: [
-        { meta: {zuid: 33}, content: { item_name: 'Jack\'s Spicy Chicken', image: { data: [{url: "https://q4kk5z5z.media.zestyio.com/01_JacksSpicyChicken.png", zuid: "3-6cdbe79-5o6nu"}] } } }
+        {
+          meta:
+          {zuid: 33},
+          content: {
+            item_name: 'Jack\'s Spicy Chicken',
+            image: {
+              data: [{url: "https://q4kk5z5z.media.zestyio.com/01_JacksSpicyChicken.png", zuid: "3-6cdbe79-5o6nu"}]
+            }
+          }
+        }
       ],
     };
   },
